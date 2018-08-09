@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Views;
 using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace SCEyP
 {
@@ -34,9 +35,7 @@ namespace SCEyP
         private void btninicioSesion_Click(object sender, EventArgs e)
         {
 
-            string cadenaConexion = vm_iniciosesion.inicioSesion(textBox1.Text, textBox2.Text, connectionString);
-
-            MessageBox.Show(cadenaConexion);
+            MessageBox.Show(vm_iniciosesion.inicioSesion(textBox1.Text, textBox2.Text, connectionString));
 
         }
     }
