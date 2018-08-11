@@ -10,33 +10,46 @@ namespace Views
 {
     public class vw_inicioSesion
     {
+        string nombreEquipo = Environment.MachineName;
+
         con_inicioSesion con_iniciosesion = new con_inicioSesion();
-        public string inicioSesion(string nombreUsuario = "", string contrasenaUsuario = "", string connectionString = "")
+        public List<mod_Login> inicioSesion(string nombreUsuario = "", string contrasenaUsuario = "", string connectionString = "")
         {
-            string resultado = string.Empty;
+            List<mod_Login> respuesta = new List<mod_Login>();
+
+            mod_Login loginRespuesta = new mod_Login();
 
             if(nombreUsuario == "" && contrasenaUsuario == "")
             {
-                resultado = "¡Complete los campos!";
+                loginRespuesta.bandera = "0";
+                loginRespuesta.mensaje = "¡Complete los campos!";
             }
             else if(nombreUsuario == "")
             {
-                resultado = "¡Introduzca su nombre de usuario!";
+                loginRespuesta.bandera = "0";
+                loginRespuesta.mensaje = "¡Introduzca su nombre de usuario!";
             }
             else if (contrasenaUsuario == "")
             {
-                resultado = "¡Introduzca su contraseña de acceso!";
+                loginRespuesta.bandera = "0";
+                loginRespuesta.mensaje = "¡Introduzca su contraseña de acceso!";
             }
             else if(connectionString == "")
             {
-                resultado = "¡Consulte a sistemas!, no se encuentra la cadena de conexión hacia la base de datos";
+                loginRespuesta.bandera = "0";
+                loginRespuesta.mensaje = "¡Consulte a sistemas!, no se encuentra la cadena de conexión hacia la base de datos";
             }
             else
             {
-                resultado = con_iniciosesion.inicioSesion(nombreUsuario, contrasenaUsuario, connectionString)[0].mensaje.ToString();
+                List<mod_respuestaProcedimientoAlmacenadoSimple> respuestaController = con_iniciosesion.inicioSesion(nombreUsuario, contrasenaUsuario, connectionString, nombreEquipo).ToList();
+
+                loginRespuesta.bandera = respuestaController[0].bandera.ToString();
+                loginRespuesta.mensaje = respuestaController[0].mensaje.ToString();
             }
 
-            return resultado;
+            respuesta.Add(loginRespuesta);
+
+            return respuesta;
         }
     }
 }

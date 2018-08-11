@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtnombreUsuario = new System.Windows.Forms.TextBox();
+            this.txtcontrasenaAcceso = new System.Windows.Forms.TextBox();
             this.btninicioSesion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtnombreUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(23, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtnombreUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombreUsuario.Location = new System.Drawing.Point(23, 180);
+            this.txtnombreUsuario.Name = "txtnombreUsuario";
+            this.txtnombreUsuario.Size = new System.Drawing.Size(252, 22);
+            this.txtnombreUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // txtcontrasenaAcceso
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtcontrasenaAcceso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontrasenaAcceso.Location = new System.Drawing.Point(23, 232);
+            this.txtcontrasenaAcceso.Name = "txtcontrasenaAcceso";
+            this.txtcontrasenaAcceso.Size = new System.Drawing.Size(252, 22);
+            this.txtcontrasenaAcceso.TabIndex = 1;
             // 
             // btninicioSesion
             // 
             this.btninicioSesion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninicioSesion.Location = new System.Drawing.Point(74, 238);
+            this.btninicioSesion.Location = new System.Drawing.Point(74, 270);
             this.btninicioSesion.Name = "btninicioSesion";
             this.btninicioSesion.Size = new System.Drawing.Size(140, 30);
             this.btninicioSesion.TabIndex = 2;
@@ -69,44 +69,44 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbxLogo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtnombreUsuario);
             this.panel1.Controls.Add(this.btninicioSesion);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtcontrasenaAcceso);
             this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 327);
             this.panel1.TabIndex = 3;
             // 
-            // label1
+            // pbxLogo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre de usuario:";
+            this.pbxLogo.Location = new System.Drawing.Point(82, 14);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(132, 123);
+            this.pbxLogo.TabIndex = 5;
+            this.pbxLogo.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 182);
+            this.label2.Location = new System.Drawing.Point(20, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña de acceso:";
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(88, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 93);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre de usuario:";
             // 
             // wf_inicioSesion
             // 
@@ -122,18 +122,18 @@
             this.Load += new System.EventHandler(this.wf_inicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtnombreUsuario;
+        private System.Windows.Forms.TextBox txtcontrasenaAcceso;
         private System.Windows.Forms.Button btninicioSesion;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
