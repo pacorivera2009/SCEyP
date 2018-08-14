@@ -37,7 +37,7 @@ namespace Controllers
             {
                 ParameterName = "dispositivoUsuario",
                 MySqlDbType = MySqlDbType.VarChar,
-                Value = nombreUsuario,
+                Value = nombreEquipo,
                 Size = 200
             });
 

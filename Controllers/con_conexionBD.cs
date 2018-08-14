@@ -81,7 +81,15 @@ namespace Controllers
                     }
                 }
             }
-            catch(Exception ex)
+            catch (MySqlException ex)
+            {
+
+                mod_respuestaProcedimiento.bandera = "0";
+                mod_respuestaProcedimiento.mensaje = ex.Message.ToString();
+
+                respuestaProcedimiento.Add(mod_respuestaProcedimiento);
+            }
+            catch (Exception ex)
             {
                
                 mod_respuestaProcedimiento.bandera = "0";
