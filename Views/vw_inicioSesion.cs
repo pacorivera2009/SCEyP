@@ -41,7 +41,9 @@ namespace Views
             }
             else
             {
-                List<mod_respuestaProcedimientoAlmacenadoSimple> respuestaController = con_iniciosesion.inicioSesion(nombreUsuario, contrasenaUsuario, connectionString, nombreEquipo).ToList();
+                con_Seguridad seguridad = new con_Seguridad();
+
+                List<mod_respuestaProcedimientoAlmacenadoSimple> respuestaController = con_iniciosesion.inicioSesion(nombreUsuario, seguridad.Encriptar(contrasenaUsuario), connectionString, nombreEquipo).ToList();
 
                 loginRespuesta.bandera = respuestaController[0].bandera.ToString();
                 loginRespuesta.mensaje = respuestaController[0].mensaje.ToString();

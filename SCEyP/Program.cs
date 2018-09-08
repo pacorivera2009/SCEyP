@@ -8,6 +8,7 @@ namespace SCEyP
 {
     static class Program
     {
+        public static string nombreUsuario { get; set; }
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vm_menuPrincipal.cs" />
+    <Compile Include="vm_solicitudRecuperacion.cs" />
     <Compile Include="vw_inicioSesion.cs" />
   </ItemGroup>
   <ItemGroup>

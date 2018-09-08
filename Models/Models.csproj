@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="mod_cierreSesion.cs" />
     <Compile Include="mod_Login.cs" />
     <Compile Include="mod_respuestaProcedimientoAlmacenadoSimple.cs" />
+    <Compile Include="mod_solicitudRecuperacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,11 +8,11 @@ using Models;
 
 namespace Controllers
 {
-    public class con_inicioSesion : con_conexionBD
+    public class con_menuPrincipal
     {
         con_conexionBD conexionBD = new con_conexionBD();
 
-        public List<mod_respuestaProcedimientoAlmacenadoSimple> inicioSesion(string nombreUsuario, string contrasenaUsuario, string connectionString, string nombreEquipo)
+        public List<mod_respuestaProcedimientoAlmacenadoSimple> menuPrincipal(string nombreUsuario, string contrasenaUsuario, string connectionString, string nombreEquipo)
         {
             con_Seguridad seguridad = new con_Seguridad();
 
@@ -44,7 +44,33 @@ namespace Controllers
             });
 
             return conexionBD.ejecucionProcedimientoAlmacenado("sp_inicioSesion", parametrosLista, connectionString);
-            
+
+
+        }
+
+        public List<mod_respuestaProcedimientoAlmacenadoSimple> cierreSesion(string nombreUsuario, string connectionString, string nombreEquipo)
+        {
+
+            List<MySqlParameter> parametrosLista = new List<MySqlParameter>();
+
+            parametrosLista.Add(new MySqlParameter()
+            {
+                ParameterName = "nombreUsuario",
+                MySqlDbType = MySqlDbType.VarChar,
+                Value = nombreUsuario,
+                Size = 200
+            });
+
+            parametrosLista.Add(new MySqlParameter()
+            {
+                ParameterName = "dispositivoUsuario",
+                MySqlDbType = MySqlDbType.VarChar,
+                Value = nombreEquipo,
+                Size = 200
+            });
+
+            return conexionBD.ejecucionProcedimientoAlmacenado("sp_cierreSesion", parametrosLista, connectionString);
+
 
         }
     }

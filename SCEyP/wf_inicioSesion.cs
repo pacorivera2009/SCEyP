@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Views;
 using System.Configuration;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using Models;
 
 namespace SCEyP
@@ -33,6 +33,12 @@ namespace SCEyP
             //SCEyP.Properties.Settings.bdhugribaConnectionString
         }
 
+        private void llrecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            wf_solicitudRecuperacion wf_solicitudRecuperacion = new wf_solicitudRecuperacion();
+            wf_solicitudRecuperacion.ShowDialog();
+        }
+
         private void btninicioSesion_Click(object sender, EventArgs e)
         {
             List<mod_Login> respuesta_pet = vm_iniciosesion.inicioSesion(txtnombreUsuario.Text, txtcontrasenaAcceso.Text, connectionString).ToList();
@@ -41,7 +47,7 @@ namespace SCEyP
             {
                 MessageBox.Show(respuesta_pet[0].mensaje, "Información del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                if(txtnombreUsuario.Text == "" && txtcontrasenaAcceso.Text == "")
+                if (txtnombreUsuario.Text == "" && txtcontrasenaAcceso.Text == "")
                 {
                     txtnombreUsuario.Focus();
                 }
@@ -49,7 +55,7 @@ namespace SCEyP
                 {
                     txtnombreUsuario.Focus();
                 }
-                else if(txtnombreUsuario.Text != "" && txtcontrasenaAcceso.Text == "")
+                else if (txtnombreUsuario.Text != "" && txtcontrasenaAcceso.Text == "")
                 {
                     txtcontrasenaAcceso.Focus();
                 }
@@ -60,12 +66,14 @@ namespace SCEyP
 
                     txtnombreUsuario.Focus();
                 }
+
+                wf_menuPrincipal wf_menuprincipal = new wf_menuPrincipal();
+                wf_menuprincipal.ShowDialog();
             }
             else
             {
                 MessageBox.Show(respuesta_pet[0].mensaje, "Información del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
     }
 }

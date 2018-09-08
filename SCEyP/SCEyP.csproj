@@ -64,6 +64,18 @@
     <Compile Include="wf_inicioSesion.Designer.cs">
       <DependentUpon>wf_inicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="wf_menuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wf_menuPrincipal.Designer.cs">
+      <DependentUpon>wf_menuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wf_solicitudRecuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wf_solicitudRecuperacion.Designer.cs">
+      <DependentUpon>wf_solicitudRecuperacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,12 @@
     </Compile>
     <EmbeddedResource Include="wf_inicioSesion.resx">
       <DependentUpon>wf_inicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_menuPrincipal.resx">
+      <DependentUpon>wf_menuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wf_solicitudRecuperacion.resx">
+      <DependentUpon>wf_solicitudRecuperacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -160,6 +178,7 @@
     <Content Include="Imagenes\Iconos\mas.png" />
     <Content Include="Imagenes\Iconos\ordencompra.jpg" />
     <Content Include="Imagenes\Iconos\ordencompra_opt.jpg" />
+    <Content Include="Imagenes\Iconos\papel-de-hombre-de-negocios-de-la-solicitud-de-un-puesto-de-trabajo.png" />
     <Content Include="Imagenes\Iconos\personal-information.png" />
     <Content Include="Imagenes\Iconos\pixel77-free-vector-email-icon-0606.jpg" />
     <Content Include="Imagenes\Iconos\prestamo-hipotecario.png" />
