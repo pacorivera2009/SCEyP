@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Views;
 using System.Configuration;
+//using MySql.Data.MySqlClient;
+using Models;
 
 namespace SCEyP
 {
@@ -31,13 +33,47 @@ namespace SCEyP
             //SCEyP.Properties.Settings.bdhugribaConnectionString
         }
 
+        private void llrecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            wf_solicitudRecuperacion wf_solicitudRecuperacion = new wf_solicitudRecuperacion();
+            wf_solicitudRecuperacion.ShowDialog();
+        }
+
         private void btninicioSesion_Click(object sender, EventArgs e)
         {
+            List<mod_Login> respuesta_pet = vm_iniciosesion.inicioSesion(txtnombreUsuario.Text, txtcontrasenaAcceso.Text, connectionString).ToList();
 
-            string cadenaConexion = vm_iniciosesion.inicioSesion(textBox1.Text, textBox2.Text, connectionString);
+            if (respuesta_pet[0].bandera == "0")
+            {
+                MessageBox.Show(respuesta_pet[0].mensaje, "Información del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            MessageBox.Show(cadenaConexion);
+                if (txtnombreUsuario.Text == "" && txtcontrasenaAcceso.Text == "")
+                {
+                    txtnombreUsuario.Focus();
+                }
+                else if (txtnombreUsuario.Text == "" && txtcontrasenaAcceso.Text != "")
+                {
+                    txtnombreUsuario.Focus();
+                }
+                else if (txtnombreUsuario.Text != "" && txtcontrasenaAcceso.Text == "")
+                {
+                    txtcontrasenaAcceso.Focus();
+                }
+                else
+                {
+                    txtnombreUsuario.Clear();
+                    txtcontrasenaAcceso.Clear();
 
+                    txtnombreUsuario.Focus();
+                }
+
+                wf_menuPrincipal wf_menuprincipal = new wf_menuPrincipal();
+                wf_menuprincipal.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(respuesta_pet[0].mensaje, "Información del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
